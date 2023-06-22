@@ -1,4 +1,4 @@
-# Criaçao de e-comerco com foco em microserviços
+# Criaçao de e-commerce com foco em microserviços
 
 Este projeto tem como objetivo construir um sistema de e-commerce para venda de fones de ouvido. Será implementado utilizando microsserviços em Node.js e a infraestrutura será gerenciada por meio de contêineres Docker.
 
