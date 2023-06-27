@@ -12,7 +12,7 @@ Este projeto tem como objetivo construir um sistema de e-commerce para venda de 
 
 ## Visão Geral
 
-Breve descrição do projeto e sua finalidade.
+Projeto e-comemerce de head-set, com foco em microsserviços. Foi utilizado recursos NodejS e docker compose, por isso é importante qiue você tenha os requisitos necessario para rodar os  serviços.
 
 ## Requisitos
   
@@ -30,11 +30,11 @@ Breve descrição do projeto e sua finalidade.
 
   **instale as dependências na pasta do projeto**:
   
-    npm install express mongoose cors dotenv nodemon
+    npm install express mongoose cors dotenv nodemon mysql2
     
 ## Por fim, execute no terminal
 
-    npm run dev
+    sudo docker-compose up
  
 ## Contribuição
 
