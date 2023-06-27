@@ -32,6 +32,7 @@ Projeto e-comemerce de head-set, com foco em microsserviços. Foi utilizado recu
 
   **instale as dependências na pasta do projeto**:
   
+    Passo desnecessario, as depedências estaram rodando dentro dos container
     npm install express mongoose cors dotenv nodemon mysql2
     
 ## Por fim, execute no terminal
