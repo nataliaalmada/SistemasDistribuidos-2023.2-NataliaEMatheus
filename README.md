@@ -26,7 +26,7 @@ Projeto e-comemerce de head-set, com foco em microsserviços. Foi utilizado recu
 
   Clone do repositorio: 
       
-      https://github.com/nataliaalmada/SistemasDistribuidos-2023.2-NataliaEMatheus.git**
+      https://github.com/nataliaalmada/SistemasDistribuidos-2023.2-NataliaEMatheus.git
  
 ## Instruções de Uso
 
