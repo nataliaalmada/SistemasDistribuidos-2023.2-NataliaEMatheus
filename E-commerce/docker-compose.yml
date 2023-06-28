@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  db:
+    image: mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=senha
+      - MYSQL_DATABASE= mysql-sistemasdis
+
+  login-service:
+    build: ./login-service
+    ports:
+      - 3000:3000
+    depends_on:
+      - cart-service
+
+  cart-service:
+    build: ./cart-service
+    ports:
+      - 3001:3001
+    depends_on:
+      - product-service
+
+  product-service:
+    build: ./product-service
+    ports:
+      - 3002:3002
+
+  frontend:
+    build: ./frontend
+    ports:
+      - 8080:8080
+    depends_on:
+      - login-service
+      - cart-service
+      - product-service
