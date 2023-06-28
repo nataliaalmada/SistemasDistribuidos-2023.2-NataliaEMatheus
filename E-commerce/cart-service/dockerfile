@@ -1,0 +1,17 @@
+# Imagem base
+FROM node:14
+
+WORKDIR /app
+
+COPY package*.json ./
+
+# Instalar as dependências
+RUN npm install
+
+COPY . .
+
+# Porta em que o serviço estará disponível dentro do contêiner
+EXPOSE 3001
+
+# Comando para iniciar o serviço com nodemon
+CMD [ "npm", "run", "dev" ]
