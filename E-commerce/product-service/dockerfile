@@ -1,0 +1,20 @@
+FROM node:14
+
+# Define o diretório de trabalho
+WORKDIR /app
+
+# Copia os arquivos do serviço para o contêiner
+COPY . /app
+
+# Instala as dependências do Node.js
+RUN npm install
+
+# Define as variáveis de ambiente para conexão com o MongoDB
+ENV MONGO_HOST=mongodb
+ENV MONGO_PORT=27017
+
+# Expõe a porta em que o serviço será executado
+EXPOSE 8080
+
+# Inicializa o servidor Node.js com nodemon
+CMD ["npx", "nodemon", "index.js"]
