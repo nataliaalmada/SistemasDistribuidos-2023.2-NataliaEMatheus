@@ -86,9 +86,9 @@ Projeto e-comemerce de head-set, com foco em microsserviços. Foi utilizado recu
 
     sudo docker-compose up
 
-## Portas principais
+## Portas para vizualização de Frontend
 
-     Frontend: http://localhost:8080
+     http://localhost:8080
  
 ## Contribuição
 
