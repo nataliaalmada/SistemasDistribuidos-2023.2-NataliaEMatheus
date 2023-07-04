@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+
+  auth-service:
+    build: ./auth-service
+    ports:
+      - 7070:7070
+    depends_on:
+      - product-service
+
+    volumes:
+    - ./isAuthenticated.js:/app/isAuthenticated.js
+
+  oerder-service:
+    build: ./order-service
+    ports:
+      - 9090:9090
+    depends_on:
+      - product-service
+      - auth-service
+
+    volumes:
+    - ./isAuthenticated.js:/app/isAuthenticated.js
+
+  product-service:
+    build: ./product-service
+    ports:
+      - 8080:8080
+
+
+    volumes:
+    - ./isAuthenticated.js:/app/isAuthenticated.js
+
+  frontend:
+    build: ./frontend
+    ports:
+      - 8888:8888
+    depends_on:
+      - auth-service
+      - product-service
+
+
